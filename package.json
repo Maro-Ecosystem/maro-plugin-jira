@@ -19,7 +19,7 @@
     "requires": {
       "maro-plugin-tasks": {
         "version": "1.0.1",
-        "source": "https://github.com/tomi2108/maro-plugin-tasks.git"
+        "source": "https://github.com/Maro-Ecosystem/maro-plugin-tasks.git"
       }
     },
     "plugin": "./dist/src/index.js"
