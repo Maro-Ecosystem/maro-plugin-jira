@@ -9,10 +9,6 @@ const schema = z.object({
   token: z.string(),
   labels: z.array(z.string()).optional(),
   board_id: z.number().optional(),
-  monitors: z.object({
-    project_key: z.string().optional(),
-    parent_issue_key: z.string().optional()
-  }).optional(),
   tasks: z.object({
     jira_parent_key: z.string().optional()
   })
@@ -35,8 +31,6 @@ export class JiraConfig implements ConfigSection {
       { key: "token", description: "Jira API token", type: "string" },
       { key: "labels", description: "Default issue labels", type: "string[]" },
       { key: "board_id", description: "Board id used for issue queries", type: "number" },
-      { key: "monitors.project_key", description: "Project key for monitor issues", type: "string" },
-      { key: "monitors.parent_issue_key", description: "Parent issue key for monitor tickets", type: "string" },
       { key: "tasks.jira_parent_key", description: "Default parent Jira issue for task creation", type: "string" }
     ];
   }
